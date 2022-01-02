@@ -30,8 +30,8 @@ jobs:
       run: |
         poetry run ./convert.sh
     - name: Commit schedule
-        run: |
-          git config --global user.name 'Github Action'
-          git config --global user.email 'github-action@users.noreply.github.com'
-          git commit -am "Generated schedule"
-          git push
+      run: |
+        git config --global user.name 'Github Action'
+        git config --global user.email 'github-action@users.noreply.github.com'
+        git commit -am "Generated schedule"
+        git push
