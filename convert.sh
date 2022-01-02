@@ -8,7 +8,7 @@ set -e
 
 SLUG=ita
 
-soffice --convert-to csv schedule-$SLUG.xlsx
+soffice --convert-to csv schedule-$SLUG.fods
 
 # https://github.com/Zverik/schedule-convert
 schedule_convert schedule-$SLUG.ini schedule-$SLUG.csv -o schedule-$SLUG.xml
