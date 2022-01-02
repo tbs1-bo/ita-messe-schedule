@@ -31,10 +31,10 @@ jobs:
         poetry run ./convert.sh
         cat *csv
 
-    - name: Validate XML
-      run: |
-        wget https://raw.githubusercontent.com/voc/schedule/master/validator/xsd/schedule.xml.xsd
-        xmlstarlet val -s schedule.xml.xsd schedule-ita.xml
+    #- name: Validate XML
+    #  run: |
+    #    wget https://raw.githubusercontent.com/voc/schedule/master/validator/xsd/schedule.xml.xsd
+    #    xmlstarlet val -s schedule.xml.xsd schedule-ita.xml
 
     - name: Commit schedule
       run: |
