@@ -30,6 +30,11 @@ jobs:
       run: |
         poetry run ./convert.sh
 
+    - name: Validate XML
+      run: |
+        wget https://raw.githubusercontent.com/voc/schedule/master/validator/xsd/schedule.xml.xsd
+        xmlstarlet val -s schedule.xml.xsd schedule-ita.xml
+
     - name: Commit schedule
       run: |
         git config --global user.name 'Github Action'
