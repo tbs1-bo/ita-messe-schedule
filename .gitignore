@@ -1,3 +1,4 @@
 start_dev_server.sh.log
 schedule-ita.csv
 poetry.lock
+schedule.xml.xsd
