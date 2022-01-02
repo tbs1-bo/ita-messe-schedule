@@ -31,6 +31,8 @@ jobs:
         poetry run ./convert.sh
         cat *csv
 
+    # more descriptive validation at https://c3voc.de/schedulexml/validate
+
     #- name: Validate XML
     #  run: |
     #    wget https://raw.githubusercontent.com/voc/schedule/master/validator/xsd/schedule.xml.xsd
