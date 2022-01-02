@@ -1,2 +1,0 @@
-# https://github.com/Zverik/schedule-convert
-schedule-convert
