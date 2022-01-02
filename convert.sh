@@ -11,7 +11,9 @@ SLUG=ita
 soffice --convert-to csv schedule-$SLUG.fods
 
 # https://github.com/Zverik/schedule-convert
-schedule_convert schedule-$SLUG.ini schedule-$SLUG.csv -o schedule-$SLUG.xml
+# -z +1 for specifying timezone. Needed for info beamer to be
+#       regonized.
+schedule_convert -z +1 schedule-$SLUG.ini schedule-$SLUG.csv -o schedule-$SLUG.xml
 
 # show finished xml doc nicely formatted
 xmlstarlet format schedule-$SLUG.xml
