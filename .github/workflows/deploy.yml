@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip schedule-convert
+        apt install -y libreoffice-core
     - name: convert
       run: |
-        libreoffice --convert-to csv schedule-ita.xlsx
         ./convert.sh
