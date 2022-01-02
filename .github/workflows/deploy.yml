@@ -24,11 +24,12 @@ jobs:
       run: |
         curl -sSL https://install.python-poetry.org | python3 -
         poetry install
-        # python -m pip install --upgrade pip schedule-convert
         sudo apt-get install -y libreoffice-core libreoffice-calc xmlstarlet
-    - name: convert
+
+    - name: Convert Excel-Sheet to XML-Frab format
       run: |
         poetry run ./convert.sh
+
     - name: Commit schedule
       run: |
         git config --global user.name 'Github Action'
