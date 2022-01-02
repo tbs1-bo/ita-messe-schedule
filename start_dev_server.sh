@@ -3,7 +3,7 @@
 # start a development and test server to test the xml frab file
 # in an info beamer environment.
 
-PORT=8004
+PORT=8005
 LOGFILE=$0.log
 
 
