@@ -8,10 +8,10 @@ set -e
 
 SLUG=ita
 
-libreoffice --convert-to csv ./schedule-$SLUG.xlsx
+libreoffice --convert-to csv $PWD/schedule-$SLUG.xlsx
 
 # https://github.com/Zverik/schedule-convert
-schedule_convert ./schedule-$SLUG.ini ./schedule-$SLUG.csv -o ./schedule-$SLUG.xml
+schedule_convert $PWD/schedule-$SLUG.ini $PWD/schedule-$SLUG.csv -o $PWD/schedule-$SLUG.xml
 
 # show finished xml doc nicely formatted
 xmlstarlet format schedule-$SLUG.xml
