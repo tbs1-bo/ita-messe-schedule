@@ -10,6 +10,12 @@ SLUG=ita
 
 libreoffice --convert-to csv schedule-$SLUG.xlsx
 
+echo "ls"
+ls -al
+echo "pwd"
+pwd
+
+
 # https://github.com/Zverik/schedule-convert
 schedule_convert schedule-$SLUG.ini schedule-$SLUG.csv -o schedule-$SLUG.xml
 
