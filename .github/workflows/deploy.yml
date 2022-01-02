@@ -29,6 +29,7 @@ jobs:
     - name: Convert Excel-Sheet to XML-Frab format
       run: |
         poetry run ./convert.sh
+        cat *csv
 
     - name: Validate XML
       run: |
