@@ -17,6 +17,11 @@ soffice --convert-to csv:"Text - txt - csv (StarCalc)":44,34,76 schedule-$SLUG.f
 # https://github.com/Zverik/schedule-convert
 # -z +1 for specifying timezone. Needed for info beamer to be
 #       regonized.
+#
+# +1: ab 31.10
+# +2: ab 27.3.
+# https://www.zeitverschiebung.net/de/timezone/europe--berlin
+#
 schedule_convert -z +1 schedule-$SLUG.ini schedule-$SLUG.csv -o schedule-$SLUG.xml
 
 # show finished xml doc nicely formatted
