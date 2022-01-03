@@ -8,7 +8,11 @@ set -e
 
 SLUG=ita
 
-soffice --convert-to csv schedule-$SLUG.fods
+# https://ask.libreoffice.org/t/how-to-convert-to-csv-with-utf-8-encoding-using-lo5-command-line/30711/4
+# https://wiki.openoffice.org/wiki/Documentation/DevGuide/Spreadsheets/Filter_Options#Filter_Options_for_the_CSV_Filter
+# need to specify encoding (UTF8) to avoid problems with german umlauts.
+#
+soffice --convert-to csv:"Text - txt - csv (StarCalc)":44,34,76 schedule-$SLUG.fods
 
 # https://github.com/Zverik/schedule-convert
 # -z +1 for specifying timezone. Needed for info beamer to be
