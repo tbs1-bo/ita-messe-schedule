@@ -17,3 +17,5 @@ package.
 * room: devices are assigned to rooms. This way only talks in the current room are shown.
 * track: mark entries with different colors.
 
+Import into info beamer will be carried out by the
+[importer.py](https://github.com/info-beamer/package-scheduled-player/blob/master/frab/importer.py).
