@@ -47,4 +47,4 @@ jobs:
         git config --global user.email 'github-action@users.noreply.github.com'
         # only commit if changes happened
         # https://stackoverflow.com/questions/8123674/how-to-git-commit-nothing-without-an-error
-        git diff-index --quiet HEAD || (git commit -am "Generated schedule"; git push)
+        git diff-index HEAD || (git commit -am "Generated schedule"; git push)
